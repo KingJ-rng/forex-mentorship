@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Action | YaseenFX</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0B0F19',
+                        cardBg: '#151D30',
+                        accentGold: '#C5A880',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-gray-100 flex items-center justify-center min-h-screen p-6">
+    <div class="bg-cardBg p-8 rounded-lg border border-gray-800 text-center max-w-sm w-full">
+        <h2 class="text-lg font-semibold text-white mb-6 leading-relaxed">Proceed to connect with YASEENFX via WhatsApp Messenger?</h2>
+        <div class="flex gap-4">
+            <a href="index.html" class="flex-1 py-3 border border-gray-700 rounded hover:bg-gray-800 transition text-sm">Back</a>
+            <a id="accept-btn" href="#" class="flex-1 py-3 bg-accentGold text-darkBg font-bold rounded hover:bg-white transition text-sm">Accept</a>
+        </div>
+    </div>
+
+    <script>
+        // Get the message from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const msg = urlParams.get('msg');
+        const acceptBtn = document.getElementById('accept-btn');
+        
+        // Encode and set the link
+        if(msg) {
+            acceptBtn.href = `https://wa.me/27794055792?text=${encodeURIComponent(msg)}`;
+        } else {
+            // Fallback if no message is provided
+            acceptBtn.href = `https://wa.me/27794055792`;
+        }
+    </script>
+</body>
+</html>
