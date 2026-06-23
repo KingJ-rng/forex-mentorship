@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YaseenFX | Mentorship Program</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0B0F19',
+                        cardBg: '#151D30',
+                        accentGold: '#C5A880',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-darkBg text-gray-100 font-sans antialiased">
+
+    <nav class="border-b border-gray-800 bg-darkBg/90 backdrop-blur sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold tracking-wider text-white">YASEEN<span class="text-accentGold">FX</span></div>
+            <button id="menu-btn" class="md:hidden text-gray-400 hover:text-white focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            <div class="hidden md:flex space-x-6 text-sm tracking-wide">
+                <a href="#about" class="text-gray-400 hover:text-white transition">Program</a>
+                <a href="#curriculum" class="text-gray-400 hover:text-white transition">Curriculum</a>
+                <a href="#pricing" class="text-gray-400 hover:text-white transition">Pricing</a>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-gray-800 bg-darkBg/95 px-6 py-4 space-y-4 text-sm">
+            <a href="#about" class="block text-gray-400">Program</a>
+            <a href="#curriculum" class="block text-gray-400">Curriculum</a>
+            <a href="#pricing" class="block text-gray-400">Pricing</a>
+        </div>
+    </nav>
+
+    <header class="relative pt-24 pb-20 px-6 bg-cover bg-center bg-no-repeat bg-blend-multiply bg-darkBg/90" style="background-image: url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80');">
+        <div class="relative z-10 max-w-4xl mx-auto text-center">
+            <span class="text-accentGold text-xs font-semibold tracking-widest uppercase border border-accentGold/30 px-3 py-1 rounded-full bg-accentGold/5">June Intake</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-white mt-6 tracking-tight">Master the Macro Markets.</h1>
+            <p class="mt-6 text-lg text-gray-400 max-w-2xl mx-auto">Foundational charting to advanced macroeconomic analysis.</p>
+        </div>
+    </header>
+
+    <section id="about" class="max-w-6xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-cardBg/60 p-8 rounded-lg border border-gray-800 relative overflow-hidden group hover:border-accentGold/30 transition">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?auto=format&fit=crop&w=600&q=80')] bg-cover opacity-[0.18] pointer-events-none"></div>
+                <div class="text-accentGold text-2xl font-mono mb-4">// 01</div>
+                <h3 class="text-lg font-bold text-white mb-2 relative z-10">Technical Charting</h3>
+                <p class="text-gray-400 text-sm leading-relaxed relative z-10">Master pure price action and structural liquidity without lagging indicators.</p>
+            </div>
+            <div class="bg-cardBg/60 p-8 rounded-lg border border-gray-800 relative overflow-hidden group hover:border-accentGold/30 transition">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=600&q=80')] bg-cover opacity-[0.18] pointer-events-none"></div>
+                <div class="text-accentGold text-2xl font-mono mb-4">// 02</div>
+                <h3 class="text-lg font-bold text-white mb-2 relative z-10">Macroeconomics</h3>
+                <p class="text-gray-400 text-sm leading-relaxed relative z-10">Analyze central bank policies, interest rate differentials, and global news events.</p>
+            </div>
+            <div class="bg-cardBg/60 p-8 rounded-lg border border-gray-800 relative overflow-hidden group hover:border-accentGold/30 transition">
+                <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1642390061910-0f71214e4f1c?auto=format&fit=crop&w=600&q=80')] bg-cover opacity-[0.18] pointer-events-none"></div>
+                <div class="text-accentGold text-2xl font-mono mb-4">// 03</div>
+                <h3 class="text-lg font-bold text-white mb-2 relative z-10">Risk Architecture</h3>
+                <p class="text-gray-400 text-sm leading-relaxed relative z-10 mb-4">Professional capital preservation models. Learn exact position sizing and psychological discipline.</p>
+                <div class="relative z-10 bg-black/40 border border-accentGold/20 p-2 rounded text-[10px] font-mono text-gray-500">
+                    <div class="h-[2px] bg-red-500/50 w-full mb-1">STOP LOSS</div>
+                    <div class="h-[2px] bg-gray-400/50 w-full mb-1">ENTRY PRICE</div>
+                    <div class="h-[2px] bg-green-500/50 w-full">TAKE PROFIT</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="max-w-3xl mx-auto px-6 py-16 border-t border-gray-900">
+        <div class="bg-cardBg/30 p-8 rounded-xl border border-accentGold/20 text-center">
+            <h2 class="text-2xl font-bold text-white">Mentorship Access</h2>
+            <div class="text-4xl font-extrabold text-white my-6">R500</div>
+            <a href="payment.html" class="inline-block bg-accentGold text-darkBg font-extrabold px-12 py-4 rounded hover:bg-white transition uppercase text-sm">BOOK NOW!</a>
+        </div>
+    </section>
+
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => mobileMenu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>
